@@ -1,0 +1,193 @@
+/* General Styles */
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #f8f9fa;
+  --accent-color: #ff5722;
+  --text-color: #333333;
+  --border-color: #dcdcdc;
+  --hover-color: #003d80;
+  --font-family: 'Roboto', sans-serif;
+  --button-radius: 5px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+body h1{
+  font-weight: 500;
+}
+body p{
+  font-weight: lighter;
+  font-size: 14px;
+}
+.container {
+  margin: 20px auto;
+  width: 60%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+  font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-actions {
+
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+.sidebar-actions button{
+  width: 9vw;
+  padding: 20px 15px;
+}
+.btn-primary {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+}
+
+.btn-primary:hover {
+  background-color: #003d8f;
+}
+
+.btn-secondary {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #cfcfcf;
+}
+
+.dropdown {
+  width: 30vw;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--button-radius);
+  outline: none;
+}
+
+.template-selector{
+  display: flex;
+  justify-content:space-between ;
+}
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 10px;
+  font-weight: lighter;
+}
+table th{
+  background-color: var(--primary-color);
+  color: white;
+
+}
+
+table th button,
+table td button{
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+  font-weight: lighter;
+  font-size: 14px;
+}
+table td .btn-secondary
+table th .btn-secondary {
+  font-size: 14px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #e6f2ff;
+}
+
+/* Form Fields */
+input[type="text"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* label {
+  font-weight: bold;
+} */
+
+/* Sections */
+.json-section,
+.bulk-upload-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.json-section p,
+.bulk-upload-section p{
+  margin-right: 20px;
+}
+.json-section button,
+.bulk-upload-section button{
+  margin-right: 20px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .sidebar-actions {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}

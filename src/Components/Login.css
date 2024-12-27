@@ -1,0 +1,62 @@
+.loader {
+  display: flex;
+  margin-top: 10%;
+  justify-content: center;
+}
+
+.bg {
+  opacity: 0.2;
+}
+
+.equifax {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.equifax-main {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 20px;
+  text-align: center;
+  width: 30%;
+  padding: 1rem;
+}
+
+.equifax-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.equifax-input {
+  margin: 20px 20px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.equifax-input input {
+  width: 60%; /* Adjusted width for better alignment */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.equifax-input-one {
+  display: flex;
+  align-items: center;
+  margin-left: 57%;
+}
+
+button {
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 70px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
