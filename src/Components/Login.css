@@ -19,7 +19,9 @@
   border-radius: 20px;
   text-align: center;
   width: 30%;
-  padding: 1rem;
+  padding: 2rem;
+  background-color: #f9f9f9; /* Subtle background color */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better appearance */
 }
 
 .equifax-form {
@@ -29,22 +31,44 @@
 }
 
 .equifax-input {
-  margin: 20px 20px 10px 10px;
+  margin: 20px 0; /* Added consistent vertical spacing */
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  width: 100%; /* Takes the full width of the form container */
+}
+
+.equifax-input label {
+  flex: 1; /* Adjust label size for better alignment */
+  text-align: left;
+  font-weight: bold;
 }
 
 .equifax-input input {
-  width: 60%; /* Adjusted width for better alignment */
+  flex: 2; /* Maintain original width */
+  width: 60%; /* Ensures input boxes remain the same size */
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 1rem;
 }
 
 .equifax-input-one {
   display: flex;
   align-items: center;
-  margin-left: 57%;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+  margin-left: 20%; /* Align checkbox with inputs */
+}
+
+.equifax-input-one input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.equifax-input-one p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 button {
@@ -52,9 +76,12 @@ button {
   color: whitesmoke;
   border: none;
   border-radius: 10px;
-  height: 30px;
-  width: 70px;
+  height: 40px;
+  width: 100px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {

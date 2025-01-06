@@ -25,7 +25,7 @@ function AddTemplate() {
   const [clientID, setClientID] = useState("");
   const [clientSecret, setClientSecret] = useState("");
   
-  const [stampDutyValue, setStampDutyValue] = useState("");                                              
+  const [stampDutyValue, setStampDutyValue] = useState("");
   const [stampDutyMethod, setStampDutyMethod] = useState("");
   const [signPartner, setSignPartner] = useState("");
   const [productName, setProductname] = useState("");
@@ -129,36 +129,6 @@ function AddTemplate() {
     }
   };
 
-  const downloadReport = async (loanId) => {
-    try {
-      // Make the API call
-      const response = await axios.post(url + '/api/fetch/documents/file', {
-        email,
-        loanId,
-        token
-      });
-      
-      // Process the response
-      const esignDocument = {
-        loanId: response.data.loanId,
-        esignData: response.data.esignData,
-        auditTrail: response.data.auditTrail
-      };
-  
-      // Create and trigger download
-      const linkSource = `data:application/pdf;base64,${esignDocument.esignData}`;
-      const downloadLink = document.createElement("a");
-      const fileName = `${esignDocument.loanId}_Loan_Agreement.pdf`;
-      
-      downloadLink.href = linkSource;
-      downloadLink.download = fileName;
-      downloadLink.click();
-    } catch (error) {
-      console.error('Error downloading report:', error);
-      throw error;
-    }
-  };
-
   useEffect(() => {
     if (!selectedTemplateId) return;
 
@@ -244,8 +214,7 @@ function AddTemplate() {
 
         <div className="button-group">
           <button className="button-home" onClick={() => (window.location.href = "/")}>Home</button>
-          <button className="button-upload">Upload</button>
-          <button className="button-preview">Preview</button>
+        
           <button className="button-logout">Logout</button>
         </div>
 

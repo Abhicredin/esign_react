@@ -6,15 +6,15 @@ import HomePage from "./Components/Esign/HomePage";
 import Home from "./Components/Esign/MyDocuments";
 import AddTemplatePage from "./Components/Esign/ProductTemplate/ProductTemplate";
 // import AddTemplatePage from "./Components/Esign/ProductTemplate";
-import ProtectedRoute from "./Components/ProtectedRoute"
+import ProtectedRoute from "./Components/ProtectedRoutes";
 
 export const version = 1.1;
 let url;
 
 if (window.location.href.includes("localhost")) {
   // url = `http://localhost:5000`;
-  url = `http://staging.console.api.credin.in`;
-  // url = 'https://consoleapi.credin.in'
+  // url = `http://staging.console.api.credin.in`;
+  url = 'https://consoleapi.credin.in'
 
 } else if (window.location.href.includes("staging")) {
   url = `https://staging.cpanel.api.credin.in`;
@@ -32,13 +32,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
 
-        <Route path="/" element={<HomePage />} />
-
-        <Route path="/documents" element={<Home />} />
-        <Route path="/addtemplate" element={<AddTemplatePage />} />
-
-
-         {/* <Route
+        <Route
           path="/"
           element={
             <ProtectedRoute>
@@ -61,11 +55,11 @@ function App() {
               <AddTemplatePage />
             </ProtectedRoute>
           }
-        /> */}
-        
-      </Routes> 
+        />
 
-      
+      </Routes>
+
+
     </BrowserRouter>
   );
 }
